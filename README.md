@@ -5,3 +5,7 @@ Pre-requisites:
    Command: pip install -r requirements.txt
 3. Install Mysql, Add your username and password, Create a database name:"product_db"
    commad: CREATE DATABASE product_db;
+
+
+index.html file:
+- You can add the products using this and see, only I not added the update functionlity here.
