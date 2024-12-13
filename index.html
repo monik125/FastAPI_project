@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <h1>Product Management</h1>
+
+    <h2>Add Product</h2>
+    <form onsubmit="addProduct(); return false;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="finished">Finished</option>
+            <option value="semi-finished">Semi-Finished</option>
+            <option value="raw">Raw</option>
+        </select><br>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description"><br>
+
+        <label for="product_image">Product Image URL:</label>
+        <input type="text" id="product_image"><br>
+
+        <label for="sku">SKU:</label>
+        <input type="text" id="sku" required><br>
+
+        <label for="unit_of_measure">Unit of Measure:</label>
+        <select id="unit_of_measure">
+            <option value="mtr">mtr</option>
+            <option value="mm">mm</option>
+            <option value="ltr">ltr</option>
+            <option value="ml">ml</option>
+            <option value="cm">cm</option>
+            <option value="mg">mg</option>
+            <option value="gm">gm</option>
+            <option value="unit">unit</option>
+            <option value="pack">pack</option>
+        </select><br>
+
+        <label for="lead_time">Lead Time (days):</label>
+        <input type="number" id="lead_time" required><br>
+
+        <button type="submit">Add Product</button>
+    </form>
+
+    <h2>Product List</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>SKU</th>
+                <th>Unit of Measure</th>
+                <th>Lead Time</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="product-table"></tbody>
+    </table>
+</body>
+</html>
